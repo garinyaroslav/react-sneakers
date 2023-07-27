@@ -108,7 +108,7 @@ function App() {
         <Header onClickCart={() => setCartOpened(true)} />
         
         <Routes>
-          <Route path="" element={
+          <Route path="react-sneakers" element={
             <Home
               items={items}
               cartItems={cartItems}
@@ -120,10 +120,10 @@ function App() {
               isLoading={isLoading}
             />
           } />
-          <Route path="favorites" element={
+          <Route path="react-sneakers/favorites" element={
             <Favorites />
           } />
-          <Route path="orders" element={
+          <Route path="react-sneakers/orders" element={
             <Orders />
           } />
         </Routes>
