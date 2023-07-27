@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header';
 import Drawer from './components/Drawer';
-import NoMatch from './components/NoMatch';
 import AppContext from './context';
 
 import Home from './pages/Home';
@@ -107,9 +106,9 @@ function App() {
         />
 
         <Header onClickCart={() => setCartOpened(true)} />
-
+        
         <Routes>
-          <Route path="/" element={
+          <Route path="" element={
             <Home
               items={items}
               cartItems={cartItems}
@@ -121,14 +120,11 @@ function App() {
               isLoading={isLoading}
             />
           } />
-          <Route path="/favorites" element={
+          <Route path="favorites" element={
             <Favorites />
           } />
-          <Route path="/orders" element={
+          <Route path="orders" element={
             <Orders />
-          } />
-          <Route path="*" element={
-            <NoMatch />
           } />
         </Routes>
       </div>
